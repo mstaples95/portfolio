@@ -1,0 +1,21 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.nav-bar{
+    @include flexSpaceBetweenRow;   
+    &__logo{
+        width: 4rem;
+        height: 4rem;
+    }
+    &__list{
+        @include flexSpaceAroundRow;
+    }
+    &__list-item :hover {
+        color: burlywood;
+        border-bottom: 1px solid black;
+    }
+}
+li {
+    margin: 0 1rem;
+}
+
