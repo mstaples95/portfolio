@@ -1,0 +1,20 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.project-card{
+    background-color: white;
+    border-radius: 10px;
+    @include flexStartColumn;
+    width: 15rem;
+    height: 23rem;
+
+    &__img{
+        width: 15rem;
+        height: 11rem;
+        border-radius: 10px;
+    }
+
+    &__content{
+        padding: 0 1rem;
+    }
+}

@@ -3,10 +3,18 @@
 
 
 .featured{
+    background-color: lightgray;
+    padding: 2rem 0;
+    
     &__header{
         @include flexCenterColumn;
     }
     &__header-text{
         margin-bottom: 0;
+    }
+    &__project-container{
+        @include flexSpaceAroundRow;
+        margin: 1.5rem 1rem;
+        padding: 1rem 0;
     }
 }
