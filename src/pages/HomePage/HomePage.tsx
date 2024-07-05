@@ -3,6 +3,7 @@ import './homepage.scss'
 import ButtonMedium from "../../components/Button-Medium/Button-Medium";
 import placeholderImg from "../../assets/images/final-fantasy-14-dark-knight-4k-wallpaper-3840x2160-uhdpaper.com-368.0_b.jpg"
 import Featured from "../../components/Featured/Featured";
+import About from "../../components/About/About";
 
 const HomePage: React.FC = () => {
     return (
@@ -29,7 +30,8 @@ const HomePage: React.FC = () => {
                 </div>   
         </div>
         <div>
-         <Featured/>   
+         <Featured/>
+         <About/>   
         </div>
     </> 
     )
