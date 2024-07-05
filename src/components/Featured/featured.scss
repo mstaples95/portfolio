@@ -1,0 +1,12 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+
+.featured{
+    &__header{
+        @include flexCenterColumn;
+    }
+    &__header-text{
+        margin-bottom: 0;
+    }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./featured.scss";
 
 const Featured: React.FC = () =>{
     return (
