@@ -1,0 +1,11 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.button-medium{
+    @include flexCenterRow;
+    width: 9.5rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin-right: 1rem;
+}
