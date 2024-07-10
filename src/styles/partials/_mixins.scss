@@ -27,6 +27,13 @@
     align-items: center;
 }
 
+@mixin flexStartRow{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 @mixin flexCenterColumn{
     display:flex;
     flex-direction: column;
