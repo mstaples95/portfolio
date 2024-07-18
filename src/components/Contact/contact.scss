@@ -1,10 +1,12 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/breakpoints' as *;
+@use '../../styles/partials/variables' as *;
 
 .contact {
     padding: 4rem 1.5rem;
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
+    background-color: $lilac;
     @include flexStartColumn;
     align-items: flex-start;
 
@@ -19,9 +21,9 @@
 
     &__info-header{
         margin: .5rem 0;
-        border: 1px solid gray;
+        border: 1px solid $ash;
         border-radius: 10px;
-        background-color: gray;
+        background-color: $black;
         width: 9rem;
         padding: 0.25rem .5rem
     }

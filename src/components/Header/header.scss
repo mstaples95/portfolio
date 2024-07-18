@@ -1,8 +1,11 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/breakpoints' as *;
+@use '../../styles/partials/variables' as *;
 
 .nav-bar{
-    @include flexSpaceBetweenRow;   
+    @include flexSpaceBetweenRow;
+    background-color: $dark-purple;
+    border-bottom: 1px solid $black;   
     &__logo{
         width: 4rem;
         height: 4rem;
@@ -11,10 +14,15 @@
         @include flexSpaceAroundRow;
     }
     &__list-item :hover {
-        color: burlywood;
+        color: $lilac;
         border-bottom: 1px solid black;
     }
 }
+
+.nav-bar a{
+    color: black;
+}
+
 li {
     margin: 0 1rem;
 }

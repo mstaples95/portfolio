@@ -1,7 +1,7 @@
 import React from "react";
 import './homepage.scss'
 import ButtonMedium from "../../components/Button-Medium/Button-Medium";
-import placeholderImg from "../../assets/images/758b3e831a9a03afeb531faf53040da07ad35c8a-1456x816.png"
+import placeholderImg from "../../assets/images/Union2.png"
 import Featured from "../../components/Featured/Featured";
 import About from "../../components/About/About";
 import Contact from "../../components/Contact/Contact";

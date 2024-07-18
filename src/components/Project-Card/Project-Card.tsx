@@ -1,5 +1,6 @@
 import React from "react";
-import "./projectcard.scss"
+import "./projectcard.scss";
+import ButtonMedium from "../Button-Medium/Button-Medium";
 
 interface CardProps {
 title: string;
@@ -14,6 +15,9 @@ const ProjectCard: React.FC<CardProps> = ({title, description, imgUrl}) => {
             <div className="project-card__content">
                 <h3>{title}</h3>
                 <p>{description}</p>
+            </div>
+            <div>
+                <ButtonMedium title="View Repo" textColor="white" backgroundColor="#674188"/>
             </div>
         </div>
     );

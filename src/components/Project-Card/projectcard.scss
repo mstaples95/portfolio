@@ -1,12 +1,14 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/breakpoints' as *;
+@use '../../styles/partials/variables' as *;
 
 .project-card{
-    background-color: white;
+    background-color: $black;
+    color: $cream;
     border-radius: 10px;
     @include flexStartColumn;
     width: 15rem;
-    height: 23rem;
+    height: 26rem;
 
     &__img{
         width: 15rem;

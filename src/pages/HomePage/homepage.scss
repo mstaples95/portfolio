@@ -1,21 +1,21 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/breakpoints' as *;
+@use '../../styles/partials/variables' as *;
 
 
 .hero {
-    @include flexSpaceAroundRow;
-    margin: 3rem 0;
+    @include flexSpaceBetweenRow;
+    padding-left: 1.5rem;
+    background-color: $black;
 
     &__button-container{
         @include flexSpaceEvenlyRow;
         justify-content: flex-start;
     }
     &__main{
-        width: 40%;
+        width: 35%;
     }
     &__img{
-        width: 35rem;
-        height: 30rem;
-        border-radius: 10px;
+        width: 50rem;
     }
 }
