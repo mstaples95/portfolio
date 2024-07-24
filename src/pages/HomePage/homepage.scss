@@ -6,8 +6,19 @@
 .hero {
     @include flexSpaceBetweenRow;
     padding-left: 1.5rem;
-    background-color: $black;
+    background-image: url('../../assets/images/black-carbon-fiber-35yxtk8m3ebo7623.jpg');
 
+    &__header{
+        color: $bone;
+        margin-bottom: 0;
+    }
+    &__sub-header{
+        color: $ash;
+        margin-top: 0;
+    }
+    &__text{
+        color: $bone;
+    }
     &__button-container{
         @include flexSpaceEvenlyRow;
         justify-content: flex-start;

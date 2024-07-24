@@ -18,7 +18,7 @@ const Featured: React.FC = () =>{
                 <ProjectCard title="GoGoGrocery" description="A meal planning web-app designed to help users figure out what they need at the grocery store." imgUrl={gggThumb}/>
                 <ProjectCard title="Street Fighter DB" description="An open-source API project for developers and fans of street Fighter." imgUrl={sfdbThumb}/>
                 <ProjectCard title="GW2 PVP Stats" description="A tool for players to see their ranked and unranked PVP progression." imgUrl={gw2Thumb}/>
-                <ProjectCard title="Gen 2 Pokemon Quiz" description="A quiz app where you answer questions to find out what Pokemon matches your personality." imgUrl={gen2Thumb}/>
+                <ProjectCard title="Pokemon Quiz" description="An app where you answer questions to find out what Pokemon matches your personality." imgUrl={gen2Thumb}/>
             </div>
         </div>
     )

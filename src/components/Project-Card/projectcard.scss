@@ -4,19 +4,32 @@
 
 .project-card{
     background-color: $black;
-    color: $cream;
+    color: $ash;
     border-radius: 10px;
-    @include flexStartColumn;
+    @include flexSpaceBetweenColumn;
     width: 15rem;
     height: 26rem;
+    padding: 1rem;
+    border: 2px solid $dark-purple;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.7); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.7);
+
+    &__heading{
+        color: $bone;
+        margin: .5rem 0;
+    }
 
     &__img{
-        width: 15rem;
-        height: 11rem;
+        width: 12rem;
+        height: 10rem;
         border-radius: 10px;
     }
 
     &__content{
         padding: 0 1rem;
+    }
+
+    &__button-container{
+        justify-self: flex-end;
     }
 }
