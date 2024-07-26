@@ -7,16 +7,13 @@
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
     background-color: $lilac;
-    @include flexStartColumn;
+    @include flexCenterColumn;
     align-items: flex-start;
 
-    &__header{
-        width: 50%;
-    }
     &__form{
-        @include flexStartColumn;
+        @include flexCenterColumn;
         align-items: stretch;
-        width: 50%;
+        width: 100%;
     }
 
     &__info-header{
@@ -32,9 +29,6 @@
         margin: 0;
     }
 
-    &__info{
-        margin-right: 1rem;
-    }
     &__text{
         margin: 0;
     }
@@ -57,8 +51,12 @@
     }
 
     &__content{
+        @include flexCenterColumn;
         width: 100%;
-        @include flexSpaceBetweenRow
+    }
+    &__info{
+        margin-top: 2rem;
+        @include flexStartRow;
     }
 }
 

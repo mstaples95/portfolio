@@ -27,7 +27,6 @@ const Contact: React.FC = () =>{
             
             
                 <div className="contact__info">
-                    <h3 className="contact__info-header">Contact Info</h3>
                     <ul className="contact__list"> 
                         <li className="contact__list-item">
                             <img className="contact__icon" src={emailIcon} alt="email"></img>

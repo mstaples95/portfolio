@@ -7,12 +7,12 @@
     color: $ash;
     border-radius: 10px;
     @include flexSpaceBetweenColumn;
-    width: 15rem;
-    height: 26rem;
+    width: 21rem;
     padding: 1rem;
     border: 2px solid $dark-purple;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.7); 
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.7);
+    margin-bottom: 2rem;
 
     &__heading{
         color: $bone;
@@ -20,8 +20,8 @@
     }
 
     &__img{
-        width: 12rem;
-        height: 10rem;
+        width: 18rem;
+        height: 12rem;
         border-radius: 10px;
     }
 

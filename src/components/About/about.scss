@@ -5,26 +5,38 @@
 .about{
     padding: 3rem 2rem;
     background-color: $bone;
+    
     &__header{
-        @include flexSpaceBetweenRow;
+        @include flexCenterColumn;
     }
     &__button-container{
         @include flexCenterRow
     }
 
     &__text-content{
-        width: 65%;
+        @include flexSpaceBetweenRow;
+        margin: 1.5rem 0;
+        flex-direction: column-reverse;
+    }
+
+
+    &__profile-img{
+        height: 12rem;
+        width: 12rem;
+        border-radius: 50%;
     }
 
     &__subheading{
         @include flexSpaceBetweenRow;
+        
     }
     
     &__tech-list{
-        @include flexSpaceEvenlyRow;
+        @include flexSpaceAroundRow;
         background-color: $dark-purple;
         border-radius: 10px;
-        padding: 1rem 0;
+        padding: 1rem;
+        flex-wrap: wrap;
     }
 
     &__list-item{
@@ -33,7 +45,7 @@
 }
 
 .about li {
-    margin: 0;
+    margin: 0.25rem;
 }
 .change-color{
     color: #ffffff;
