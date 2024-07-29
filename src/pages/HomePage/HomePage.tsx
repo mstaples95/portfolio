@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './homepage.scss'
 import ButtonMedium from "../../components/Button-Medium/Button-Medium";
-import placeholderImg from "../../assets/images/Union2.png"
+import mobileImg from "../../assets/images/mobilebg3.png"
+import tabletImg from "../../assets/images/tabletbg5.png"
+import desktopImg from "../../assets/images/desktopunion.png"
 import Featured from "../../components/Featured/Featured";
 import About from "../../components/About/About";
 import Contact from "../../components/Contact/Contact";
 
 const HomePage: React.FC = () => {
+    const [heroImg, setHeroImg] = useState(mobileImg);
+
+    useEffect(() => {
+        const updateImg = () => {
+                    if (window.innerWidth > 1279) {
+                        setHeroImg(desktopImg);
+                        } else if (window.innerWidth > 767) {
+                        setHeroImg(tabletImg);
+                        } else {
+                        setHeroImg(mobileImg);
+                    }
+                    };
+
+            window.addEventListener('resize', updateImg);
+            updateImg();
+
+            return () => window.removeEventListener('resize', updateImg);
+    }, []);
+        
+
     return (
 
     <>
@@ -20,12 +42,12 @@ const HomePage: React.FC = () => {
                         </p>
                     </div>
                     <div className="hero__button-container">
-                        <ButtonMedium title="View Projects" backgroundColor="black" textColor="white"/>
+                        <ButtonMedium title="Projects" backgroundColor="black" textColor="white"/>
                         <ButtonMedium title= "Contact Me" backgroundColor="grey" textColor="black"/>
                     </div>    
                 </div>
                 <div className="hero__img-container">
-                    <img className="hero__img" src={placeholderImg} alt="placeholder" />   
+                    <img className="hero__img" src={heroImg} alt="placeholder" />   
                 </div>   
         </div>
         <div>

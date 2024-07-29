@@ -41,7 +41,7 @@ const About: React.FC = () =>{
                     <div className="about__subheading">
                         <div className="about__subheading-right">
                             <h3 className="about__subheader">Experience</h3>
-                            <ul>
+                            <ul className="about__list">
                                 <li>Worked with clients in various industries.</li>
                                 <li>Delivered high-quality, responsive websites.</li>
                                 <li>Created wireframes, mockups, and prototypes to visualize website designs.</li>

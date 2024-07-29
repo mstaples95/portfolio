@@ -11,7 +11,7 @@
 
 h1 {
     font-family: "Libre Franklin", sans-serif;
-    font-size: 36px;
+    font-size: 38px;
     line-height: normal;
 }
 
@@ -24,7 +24,7 @@ li {
 
 h2 {
     font-family: "Libre Franklin", sans-serif;
-    font-size: 24px;
+    font-size: 28px;
     line-height: normal;
 }
 
@@ -44,7 +44,7 @@ h4{
 
 p {
     font-family: "Libre Franklin", sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     line-height: normal;
 
     @include tabletMode {

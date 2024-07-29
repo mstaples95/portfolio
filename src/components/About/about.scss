@@ -38,7 +38,9 @@
         padding: 1rem;
         flex-wrap: wrap;
     }
-
+    &__list{
+        list-style: inside;
+    }
     &__list-item{
         @include flexCenterColumn;
     }

@@ -7,6 +7,7 @@
     @include flexSpaceBetweenRow;
     padding-left: 1.5rem;
     background-image: url('../../assets/images/black-carbon-fiber-35yxtk8m3ebo7623.jpg');
+    height: 90vh;
 
     &__header{
         color: $bone;
@@ -24,10 +25,12 @@
         justify-content: flex-start;
     }
     &__main{
-        width: 35%;
+        width: 40%;
+    }
+    &__img-container{
+        height: 100%;
     }
     &__img{
-        width: 12rem;
-        height: 28rem;
+        height: 100%;
     }
 }
