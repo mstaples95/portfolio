@@ -25,6 +25,15 @@
         border-radius: 10px;
     }
 
+    &__tech-icon-list{
+        @include flexSpaceEvenlyRow;
+    }
+
+    &__icon{
+        width: 36px;
+        height: 36px;
+    }
+
     &__content{
         padding: 0 1rem;
     }
