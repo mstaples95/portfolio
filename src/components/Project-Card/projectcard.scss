@@ -39,6 +39,44 @@
     }
 
     &__button-container{
-        justify-self: flex-end;
+        @include flexCenterRow;
+    }
+}
+
+.card {
+    opacity: 0;
+    transform:  translateX(-100%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.card.visible{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@include tabletMode{
+    .project-card{
+        width: 45rem;
+        flex-direction: row;
+
+        &__img{
+            height: 18rem;
+            width: 22rem;
+        }
+    }
+}
+
+@include desktopMode{
+    .project-card{
+        width: 60rem;
+        padding: 1.5rem;
+
+        &__icon{
+            margin: 0 1rem;
+        }
+
+        &__tech-icon-list{
+            @include flexCenterRow;
+        }
     }
 }

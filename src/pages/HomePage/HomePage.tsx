@@ -32,7 +32,7 @@ const HomePage: React.FC = () => {
     return (
 
     <>
-        <div className="hero">
+        <div className="hero animated-background">
                 <div className="hero__main">
                     <div className="hero__text-content">
                         <h1 className="hero__header">Matthew Staples</h1>

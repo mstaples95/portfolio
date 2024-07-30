@@ -10,6 +10,11 @@
     @include flexCenterColumn;
     align-items: flex-start;
 
+    &__header{
+        max-width: 1280px;
+        margin: auto;
+    }
+
     &__form{
         @include flexCenterColumn;
         align-items: stretch;
@@ -53,6 +58,8 @@
     &__content{
         @include flexCenterColumn;
         width: 100%;
+        max-width: 1280px;
+        margin: auto;
     }
     &__info{
         margin-top: 2rem;
@@ -70,4 +77,12 @@
     margin-bottom: 1.5rem;
     
     
+}
+
+@include desktopMode{
+    .contact{
+        &__content{
+            width: 50%;
+        }
+    }
 }

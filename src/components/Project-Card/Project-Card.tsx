@@ -1,5 +1,6 @@
 import React from "react";
 import "./projectcard.scss";
+import { useInView } from "react-intersection-observer";
 import ButtonMedium from "../Button-Medium/Button-Medium";
 
 interface CardProps {
@@ -14,8 +15,14 @@ techIcon5: string;
 }
 
 const ProjectCard: React.FC<CardProps> = ({title, description, imgUrl ,techIcon1, techIcon2, techIcon3, techIcon4, techIcon5}) => {
+    
+    const { ref, inView} = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    })
+    
     return (
-        <div className="project-card">
+        <div ref={ref} className={`project-card card ${inView ? 'visible' : ''}`}>
             <img className="project-card__img" src={imgUrl} alt={title}/>
             <div className="project-card__content">
                 <h3 className="project-card__heading">{title}</h3>
@@ -30,10 +37,12 @@ const ProjectCard: React.FC<CardProps> = ({title, description, imgUrl ,techIcon1
                     </ul>
                 </div>
                 <p className="project-card__text">{description}</p>
+
+               <div className="project-card__button-container">
+                    <ButtonMedium title="View Repo" textColor="white" backgroundColor="#674188"/>
+                </div> 
             </div>
-            <div className="project-card__button-container">
-                <ButtonMedium title="View Repo" textColor="white" backgroundColor="#674188"/>
-            </div>
+            
         </div>
     );
 }
