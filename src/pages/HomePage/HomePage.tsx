@@ -11,6 +11,13 @@ import Contact from "../../components/Contact/Contact";
 const HomePage: React.FC = () => {
     const [heroImg, setHeroImg] = useState(mobileImg);
 
+    const handleProjectClick = () => {
+        document.getElementById('projects')?.scrollIntoView({behavior:'smooth'});
+    }
+    const handleContactClick = () => {
+        document.getElementById('contact')?.scrollIntoView({behavior:'smooth'});
+    }
+
     useEffect(() => {
         const updateImg = () => {
                     if (window.innerWidth > 1279) {
@@ -42,8 +49,8 @@ const HomePage: React.FC = () => {
                         </p>
                     </div>
                     <div className="hero__button-container">
-                        <ButtonMedium title="Projects" backgroundColor="black" textColor="white"/>
-                        <ButtonMedium title= "Contact Me" backgroundColor="grey" textColor="black"/>
+                        <ButtonMedium title="Projects" onClick={handleProjectClick} backgroundColor="#4f518c" textColor="black" hoverBackgroundColor="#2c2a4a" hoverTextColor="white" activeBackgroundColor="black"/>
+                        <ButtonMedium title= "Contact Me" onClick={handleContactClick} backgroundColor="#907ad6" textColor="black" hoverBackgroundColor="#2c2a4a" hoverTextColor="white" activeBackgroundColor="black"/>
                     </div>    
                 </div>
                 <div className="hero__img-container">
@@ -51,9 +58,15 @@ const HomePage: React.FC = () => {
                 </div>   
         </div>
         <div>
-         <Featured/>
-         <About/>
-         <Contact/>   
+            <div id="projects">
+                <Featured/>    
+            </div>
+            <div id="about">
+                <About/>
+            </div>
+            <div id="contact">
+                <Contact/>
+            </div>
         </div>
     </> 
     )

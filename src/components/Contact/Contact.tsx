@@ -4,8 +4,43 @@ import emailIcon from "../../assets/icons/icons8-email-50.png"
 import phoneIcon from "../../assets/icons/icons8-phone-50.png"
 import githubIcon from "../../assets/icons/icons8-github.svg"
 import ButtonMedium from "../Button-Medium/Button-Medium";
+import emailjs from "emailjs-com";
+
+
 
 const Contact: React.FC = () =>{
+    const serviceID = "service_vcr7c3t";
+    const templateID = "template_w929h0u";
+    const userID = "xozb234aWJNyclO6R";
+    const handleSubmitClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        e.preventDefault();
+
+        const name = (document.getElementById("name") as HTMLInputElement).value;
+        const email = (document.getElementById("email") as HTMLInputElement).value;
+        const message = (document.getElementById("message") as HTMLTextAreaElement).value;
+
+        if (!name || !email || !message) {
+            alert("Please fill out all fields.")
+            return;
+        }
+
+        const templateParams = {
+            name: name,
+            email: email,
+            message: message,
+        };
+
+        emailjs.send(serviceID, templateID, templateParams, userID)
+            .then((response) => {
+                console.log("Success", response.status, response.text);
+                alert("Message sent successfully.");
+            })
+            .catch((error) => {
+                console.log("Failure", error);
+                alert("Message was not sent. Try again later.");
+            });
+    };
+
     return (
         <div className="contact">
 
@@ -22,7 +57,7 @@ const Contact: React.FC = () =>{
                     <input className="contact__input" id="email" placeholder="john@example.com"></input>
                     <label className="contact__label">Message</label>
                     <textarea id="message" placeholder="Your message..."></textarea>
-                    <ButtonMedium textColor="white" backgroundColor="black" title="Submit"/>
+                    <ButtonMedium onClick={handleSubmitClick} textColor="white" backgroundColor="#04052e" title="Submit" hoverBackgroundColor="#4f518c" hoverTextColor="#02010a" activeBackgroundColor="black"/>
                 </form>
             
             

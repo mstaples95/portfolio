@@ -21,14 +21,22 @@ import profile from "../../assets/images/Matthew-Staples--Software-Engineering--
 
 
 const About: React.FC = () =>{
-    
+    const handleHireClick = () => {
+        document.getElementById('contact')?.scrollIntoView({behavior:'smooth'});
+    }
+    const handleDownloadClick = () => {
+        const link = document.createElement('a');
+        link.href = '/M Staples Resume 04_05 (1).pdf';
+        link.download ='M Staples Resume 04_05 (1).pdf';
+        link.click();
+    }
     return (
         <div className="about">
             <div className="about__header">
                 <h1 className="about__header-text">About Me</h1>
                 <div className="about__button-container">
-                <ButtonMedium textColor="white" backgroundColor="black" title="Hire Me"/>
-                <ButtonMedium textColor="black" backgroundColor="grey" title="Download CV"/>
+                <ButtonMedium textColor="black" onClick={handleHireClick} backgroundColor="#4f518c" title="Hire Me" hoverBackgroundColor="#2c2a4a" hoverTextColor="white" activeBackgroundColor="black"/>
+                <ButtonMedium onClick={handleDownloadClick} textColor="black" backgroundColor="#907ad6" title="Download CV" hoverBackgroundColor="#2c2a4a" hoverTextColor="white" activeBackgroundColor="black"/>
                 </div>
             </div>
             <div className="about__text-content">

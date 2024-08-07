@@ -6,18 +6,37 @@ interface ButtonProps{
     title: string;
     backgroundColor: string;
     textColor: string;
+    hoverBackgroundColor: string;
+    activeBackgroundColor: string;
+    hoverTextColor: string;
+    onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 } 
 
-const ButtonMedium: React.FC<ButtonProps> = ({title,backgroundColor, textColor}) => {
+const ButtonMedium: React.FC<ButtonProps> = ({
+    title,
+    backgroundColor,
+    textColor,
+    hoverBackgroundColor,
+    hoverTextColor,
+    activeBackgroundColor,
+    onClick
+    }) => {
+
     const buttonStyle = {
-        backgroundColor: backgroundColor,
-        color: textColor,
-    };
+        '--background-color': backgroundColor,
+        '--text-color': textColor,
+        '--hover-background-color': hoverBackgroundColor,
+        '--active-background-color': activeBackgroundColor,
+        '--hover-text-color': hoverTextColor,
+
+    } as React.CSSProperties;
 
     return (
-        <div className="button-medium" style={buttonStyle}>
+        
+        <button onClick={onClick} className="button-medium" style={buttonStyle}>
             <p>{title}</p>
-        </div>
+        </button>
+
     )
 }
 
